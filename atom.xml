@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>月下对饮</title>
+  
+  <subtitle>welcome!</subtitle>
+  <link href="http://example.com/atom.xml" rel="self"/>
+  
+  <link href="http://example.com/"/>
+  <updated>2022-10-29T11:36:56.805Z</updated>
+  <id>http://example.com/</id>
+  
+  <author>
+    <name>独酌</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>title</title>
+    <link href="http://example.com/2022/10/29/python%E7%AC%94%E8%AE%B0/"/>
+    <id>http://example.com/2022/10/29/python%E7%AC%94%E8%AE%B0/</id>
+    <published>2022-10-29T11:31:34.000Z</published>
+    <updated>2022-10-29T11:36:56.805Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="python笔记"><a href="#python笔记" class="headerlink" title="python笔记"></a>python笔记</h1><h2 id="Python中-1-、-1-、-1-、-n-1-、-0-、-…-0-、-…-1-的理解"><a href="#Python中-1-、-1-、-1-、-n-1-、-0-、-…-0-、-…-1-的理解" class="headerlink" title="Python中[-1]、[:-1]、[::-1]、[n::-1]、[:,:,0]、[…,0]、[…,::-1] 的理解"></a>Python中[-1]、[:-1]、[::-1]、[n::-1]、[:,:,0]、[…,0]、[…,::-1] 的理解</h2><p>下面的a &#x3D; [1,2,3,4,5]</p><ul><li>[-1]： 列表最后一项</li></ul><p><img src="https://img-blog.csdnimg.cn/20210422223934361.png" alt="在这里插入图片描述"></p><ul><li><p>[:-1]： 从第一项到最后一项<br>原型是[n : m]，前闭后开，索引从零开始，第一个索引指定可以取到，即n可以取到，后一个索引不可取到，即m不可取到。</p><p><img src="https://img-blog.csdnimg.cn/20210422224326963.png" alt="在这里插入图片描述"></p></li><li><p>[::-1]： 代表从全列表倒序取<br>原型是[n : m : k]，代表的是从那一段开始取，隔几个取一次。<br>其中，n代表的是取值开始的索引，因此该索引必将被取到，m代表的是取值结束的索引，和上面一样，该值不能被取到。<br>k代表的是间隔，间隔可正可负，正值代表正向顺序跳取，负值代表反向跳取。<br><strong>需要注意的是，当k为正的时候起始索引应该小于结束索引；当k为负的时候起始索引应该大于结束索引，因为在倒序来看，首先是索引值大的被取到，然后才是索引值小的。</strong></p><p><img src="https://img-blog.csdnimg.cn/20210422231441255.png" alt="在这里插入图片描述"></p></li><li><p>[n::-1]： 同上所述，从索引n开始倒序取值：</p><p><img src="https://img-blog.csdnimg.cn/20210422234223108.png" alt="在这里插入图片描述"></p></li><li><p>[:,:,0]： 因为有了逗号，所以这个方法就和前面的有所不同了。它是对多维数据的一种处理方式，代表了前两维全选，取其中的所有0号索引。<br>原型是[n:m, j:k, g:h]，当然维度可以更多，在图片处理中，一般用到的就是三维的。看a数组的模样就可以看出来，nm管最外层列表的取值，从第n个元素到第m个元素，前闭后开；jk管nm取中的元素的列表中的元素的选取，也是前闭后开，gh管jk取中元素的列表中的元素的选取，任意一对都可以是个整数用来直接取某个索引，这和前两个很像。<br>其实就是嵌套列表的取值方法。</p><p><img src="https://img-blog.csdnimg.cn/20210422235954890.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDM1MDMzNw==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p></li><li><p>[…,0]： 代表了取最里边一层的所有第0号元素，…代表了对:,:,:,的省略。注意只能进行一次省略，不能是[… , …]，全省略那不就是 a 吗。</p><p><img src="https://img-blog.csdnimg.cn/20210423001300773.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDM1MDMzNw==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p></li></ul><p>同样可以再使用：来分割</p><p><img src="https://img-blog.csdnimg.cn/20210423001349261.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDM1MDMzNw==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p><p>放在后面视为其中的所有值，这和[2:]很像，一个是不写代表全部，一个是用…代表全部。</p><p><img src="https://img-blog.csdnimg.cn/20210423001426330.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDM1MDMzNw==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p><ul><li><p>[…,::-1]： 是对最内层的列表进行逆序取值：</p><p><img src="https://img-blog.csdnimg.cn/20210423002409752.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDM1MDMzNw==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p></li></ul><p>当然这个挑取的取法也可以放在其他位置，比如我们将他放在中间a[: , ::-1 , :]，他就会把所有的第二层进行颠倒：</p><p><img src="https://img-blog.csdnimg.cn/20210423002800109.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDM1MDMzNw==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p><h2 id="eval函数"><a href="#eval函数" class="headerlink" title="eval函数"></a>eval函数</h2><ul><li>eval是Python的一个<a href="https://so.csdn.net/so/search?q=%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0&spm=1001.2101.3001.7020">内置函数</a>，功能十分强大，这个函数的作用是，<strong>返回传入字符串的表达式的结果。就是说：将字符串当成有效的表达式 来求值 并 返回计算结果。</strong></li></ul><p>eval(expression[, globals[, locals]])<br>expression ： 表达式。<br>globals ： （可选参数)变量作用域，全局命名空间，如果被提供，则必须是一个字典对象。<br>locals ： (可选参数)变量作用域，局部命名空间，如果被提供，可以是任何映射对象。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;python笔记&quot;&gt;&lt;a href=&quot;#python笔记&quot; class=&quot;headerlink&quot; title=&quot;python笔记&quot;&gt;&lt;/a&gt;python笔记&lt;/h1&gt;&lt;h2 id=&quot;Python中-1-、-1-、-1-、-n-1-、-0-、-…-0-、-…-1-的</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://example.com/2022/10/26/hello-world/"/>
+    <id>http://example.com/2022/10/26/hello-world/</id>
+    <published>2022-10-26T01:41:20.032Z</published>
+    <updated>2022-10-26T01:41:20.032Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt; for</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+</feed>
