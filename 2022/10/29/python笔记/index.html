@@ -20,12 +20,12 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="python笔记Python中[-1]、[:-1]、[::-1]、[n::-1]、[:,:,0]、[…,0]、[…,::-1] 的理解下面的a &#x3D; [1,2,3,4,5]  [-1]： 列表最后一项    [:-1]： 从第一项到最后一项原型是[n : m]，前闭后开，索引从零开始，第一个索引指定可以取到，即n可以取到，后一个索引不可取到，即m不可取到。   [::-1]： 代表从全列表">
+  <meta name="description" content="python笔记Python中[-1]、[:-1]、[::-1]、[n::-1]、[:,:,0]、[…,0]、[…,::-1] 的理解下面的a &#x3D; [1,2,3,4,5]  [-1]： 列表最后一项    [:-1]： 从第一项到最后一项原型是[n : m]，前闭后开，索引从零开始，第一个索引指定可以取到，即n可以取到，后一个索引不可取到，即m不可取到。    [1:]：从第二项到最后一">
 <meta property="og:type" content="article">
-<meta property="og:title" content="title">
+<meta property="og:title" content="月下对饮">
 <meta property="og:url" content="http://example.com/2022/10/29/python%E7%AC%94%E8%AE%B0/index.html">
 <meta property="og:site_name" content="月下对饮">
-<meta property="og:description" content="python笔记Python中[-1]、[:-1]、[::-1]、[n::-1]、[:,:,0]、[…,0]、[…,::-1] 的理解下面的a &#x3D; [1,2,3,4,5]  [-1]： 列表最后一项    [:-1]： 从第一项到最后一项原型是[n : m]，前闭后开，索引从零开始，第一个索引指定可以取到，即n可以取到，后一个索引不可取到，即m不可取到。   [::-1]： 代表从全列表">
+<meta property="og:description" content="python笔记Python中[-1]、[:-1]、[::-1]、[n::-1]、[:,:,0]、[…,0]、[…,::-1] 的理解下面的a &#x3D; [1,2,3,4,5]  [-1]： 列表最后一项    [:-1]： 从第一项到最后一项原型是[n : m]，前闭后开，索引从零开始，第一个索引指定可以取到，即n可以取到，后一个索引不可取到，即m不可取到。    [1:]：从第二项到最后一">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20210422223934361.png">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20210422224326963.png">
@@ -37,8 +37,9 @@
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20210423001426330.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDM1MDMzNw==,size_16,color_FFFFFF,t_70">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20210423002409752.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDM1MDMzNw==,size_16,color_FFFFFF,t_70">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20210423002800109.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDM1MDMzNw==,size_16,color_FFFFFF,t_70">
-<meta property="article:published_time" content="2022-10-29T11:31:34.000Z">
-<meta property="article:modified_time" content="2022-10-29T11:36:56.805Z">
+<meta property="og:image" content="d:/Cloud/source/_posts/python%E7%AC%94%E8%AE%B0.assets/image-20221029195716476.png">
+<meta property="article:published_time" content="2022-10-29T11:31:34.856Z">
+<meta property="article:modified_time" content="2022-10-30T13:52:13.747Z">
 <meta property="article:author" content="独酌">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://img-blog.csdnimg.cn/20210422223934361.png">
@@ -56,7 +57,7 @@
   };
 </script>
 
-  <title>title | 月下对饮</title>
+  <title> | 月下对饮</title>
   
 
 
@@ -186,7 +187,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          title
+          
         </h1>
 
         <div class="post-meta">
@@ -195,10 +196,16 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2022-10-29 19:31:34 / 修改时间：19:36:56" itemprop="dateCreated datePublished" datetime="2022-10-29T19:31:34+08:00">2022-10-29</time>
+              <time title="创建时间：2022-10-29 19:31:34" itemprop="dateCreated datePublished" datetime="2022-10-29T19:31:34+08:00">2022-10-29</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-10-30 21:52:13" itemprop="dateModified" datetime="2022-10-30T21:52:13+08:00">2022-10-30</time>
+              </span>
 
           
 
@@ -212,42 +219,76 @@
 
       
         <h1 id="python笔记"><a href="#python笔记" class="headerlink" title="python笔记"></a>python笔记</h1><h2 id="Python中-1-、-1-、-1-、-n-1-、-0-、-…-0-、-…-1-的理解"><a href="#Python中-1-、-1-、-1-、-n-1-、-0-、-…-0-、-…-1-的理解" class="headerlink" title="Python中[-1]、[:-1]、[::-1]、[n::-1]、[:,:,0]、[…,0]、[…,::-1] 的理解"></a>Python中[-1]、[:-1]、[::-1]、[n::-1]、[:,:,0]、[…,0]、[…,::-1] 的理解</h2><p>下面的a &#x3D; [1,2,3,4,5]</p>
-<ul>
+<ol>
 <li>[-1]： 列表最后一项</li>
-</ul>
+</ol>
 <p><img src="https://img-blog.csdnimg.cn/20210422223934361.png" alt="在这里插入图片描述"></p>
-<ul>
-<li><p>[:-1]： 从第一项到最后一项<br>原型是[n : m]，前闭后开，索引从零开始，第一个索引指定可以取到，即n可以取到，后一个索引不可取到，即m不可取到。</p>
+<ol start="2">
+<li>[:-1]： 从第一项到最后一项<br>原型是[n : m]，前闭后开，索引从零开始，第一个索引指定可以取到，即n可以取到，后一个索引不可取到，即m不可取到。</li>
+</ol>
 <p><img src="https://img-blog.csdnimg.cn/20210422224326963.png" alt="在这里插入图片描述"></p>
+<ol start="3">
+<li><p>[1:]：从第二项到最后一项</p>
+<p>没有指定结束索引即默认为最后一位</p>
 </li>
 <li><p>[::-1]： 代表从全列表倒序取<br>原型是[n : m : k]，代表的是从那一段开始取，隔几个取一次。<br>其中，n代表的是取值开始的索引，因此该索引必将被取到，m代表的是取值结束的索引，和上面一样，该值不能被取到。<br>k代表的是间隔，间隔可正可负，正值代表正向顺序跳取，负值代表反向跳取。<br><strong>需要注意的是，当k为正的时候起始索引应该小于结束索引；当k为负的时候起始索引应该大于结束索引，因为在倒序来看，首先是索引值大的被取到，然后才是索引值小的。</strong></p>
+</li>
+</ol>
 <p><img src="https://img-blog.csdnimg.cn/20210422231441255.png" alt="在这里插入图片描述"></p>
-</li>
-<li><p>[n::-1]： 同上所述，从索引n开始倒序取值：</p>
+<ol start="4">
+<li>[n::-1]： 同上所述，从索引n开始倒序取值：</li>
+</ol>
 <p><img src="https://img-blog.csdnimg.cn/20210422234223108.png" alt="在这里插入图片描述"></p>
-</li>
-<li><p>[:,:,0]： 因为有了逗号，所以这个方法就和前面的有所不同了。它是对多维数据的一种处理方式，代表了前两维全选，取其中的所有0号索引。<br>原型是[n:m, j:k, g:h]，当然维度可以更多，在图片处理中，一般用到的就是三维的。看a数组的模样就可以看出来，nm管最外层列表的取值，从第n个元素到第m个元素，前闭后开；jk管nm取中的元素的列表中的元素的选取，也是前闭后开，gh管jk取中元素的列表中的元素的选取，任意一对都可以是个整数用来直接取某个索引，这和前两个很像。<br>其实就是嵌套列表的取值方法。</p>
+<ol start="5">
+<li>[:,:,0]： 因为有了逗号，所以这个方法就和前面的有所不同了。它是对多维数据的一种处理方式，代表了前两维全选，取其中的所有0号索引。<br>原型是[n:m, j:k, g:h]，当然维度可以更多，在图片处理中，一般用到的就是三维的。看a数组的模样就可以看出来，nm管最外层列表的取值，从第n个元素到第m个元素，前闭后开；jk管nm取中的元素的列表中的元素的选取，也是前闭后开，gh管jk取中元素的列表中的元素的选取，任意一对都可以是个整数用来直接取某个索引，这和前两个很像。<br>其实就是嵌套列表的取值方法。</li>
+</ol>
 <p><img src="https://img-blog.csdnimg.cn/20210422235954890.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDM1MDMzNw==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-</li>
-<li><p>[…,0]： 代表了取最里边一层的所有第0号元素，…代表了对:,:,:,的省略。注意只能进行一次省略，不能是[… , …]，全省略那不就是 a 吗。</p>
+<ol start="6">
+<li>[…,0]： 代表了取最里边一层的所有第0号元素，…代表了对:,:,:,的省略。注意只能进行一次省略，不能是[… , …]，全省略那不就是 a 吗。</li>
+</ol>
 <p><img src="https://img-blog.csdnimg.cn/20210423001300773.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDM1MDMzNw==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-</li>
-</ul>
 <p>同样可以再使用：来分割</p>
 <p><img src="https://img-blog.csdnimg.cn/20210423001349261.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDM1MDMzNw==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
 <p>放在后面视为其中的所有值，这和[2:]很像，一个是不写代表全部，一个是用…代表全部。</p>
 <p><img src="https://img-blog.csdnimg.cn/20210423001426330.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDM1MDMzNw==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<ul>
-<li><p>[…,::-1]： 是对最内层的列表进行逆序取值：</p>
+<ol start="7">
+<li>[…,::-1]： 是对最内层的列表进行逆序取值：</li>
+</ol>
 <p><img src="https://img-blog.csdnimg.cn/20210423002409752.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDM1MDMzNw==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-</li>
-</ul>
 <p>当然这个挑取的取法也可以放在其他位置，比如我们将他放在中间a[: , ::-1 , :]，他就会把所有的第二层进行颠倒：</p>
 <p><img src="https://img-blog.csdnimg.cn/20210423002800109.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDM1MDMzNw==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
 <h2 id="eval函数"><a href="#eval函数" class="headerlink" title="eval函数"></a>eval函数</h2><ul>
-<li>eval是Python的一个<a target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0&spm=1001.2101.3001.7020">内置函数</a>，功能十分强大，这个函数的作用是，<strong>返回传入字符串的表达式的结果。就是说：将字符串当成有效的表达式 来求值 并 返回计算结果。</strong></li>
+<li><p>eval是Python的一个<a target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0&spm=1001.2101.3001.7020">内置函数</a>，功能十分强大，这个函数的作用是，<strong>返回传入字符串的表达式的结果。就是说：将字符串当成有效的表达式 来求值 并 返回计算结果。</strong></p>
+</li>
+<li><p><strong>去掉参数最外侧引号并执行余下语句的函数</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">eval</span>(<span class="string">&quot;1&quot;</span>)</span><br><span class="line"><span class="number">1</span></span><br><span class="line"><span class="built_in">eval</span>(<span class="string">&quot;1+2&quot;</span>)</span><br><span class="line"><span class="number">3</span></span><br><span class="line"><span class="built_in">eval</span>(<span class="string">&#x27;&quot;1+2&quot;&#x27;</span>)</span><br><span class="line"><span class="string">&#x27;1+2&#x27;</span></span><br><span class="line"><span class="built_in">eval</span>(<span class="string">&#x27;print(&quot;Hello&quot;)&#x27;</span>)</span><br><span class="line">Hello</span><br></pre></td></tr></table></figure></li>
 </ul>
 <p>eval(expression[, globals[, locals]])<br>expression ： 表达式。<br>globals ： （可选参数)变量作用域，全局命名空间，如果被提供，则必须是一个字典对象。<br>locals ： (可选参数)变量作用域，局部命名空间，如果被提供，可以是任何映射对象。</p>
+<h2 id="保留字"><a href="#保留字" class="headerlink" title="保留字"></a>保留字</h2><p><img src="D:/Cloud/source/_posts/python%E7%AC%94%E8%AE%B0.assets/image-20221029195716476.png" alt="image-20221029195716476"></p>
+<h2 id="print函数格式化"><a href="#print函数格式化" class="headerlink" title="print函数格式化"></a>print函数格式化</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&quot;转换后的温度是&#123;:.2f&#125;C&quot;</span>.<span class="built_in">format</span>(C))</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>{ }表示槽，后续变量填充到槽中</p>
+</li>
+<li><p>{:.2f}表示将变量C填充到这个位置时取小数点后2位</p>
+</li>
+</ul>
+<h2 id="整数类型"><a href="#整数类型" class="headerlink" title="整数类型"></a>整数类型</h2><ul>
+<li>可正可负，没有取值范围</li>
+<li>pow(x,y)函数，计算x^y</li>
+<li>4种进制表示形式<ul>
+<li>十进制：1010，99，-217</li>
+<li>二进制，以0b或0B开头：0b010，-0B101</li>
+<li>八进制，以0o或0O开头：0o123，-0O456</li>
+<li>十六进制，以0x或0X开头：0x9a，-0X89</li>
+</ul>
+</li>
+</ul>
+<h2 id="浮点数类型"><a href="#浮点数类型" class="headerlink" title="浮点数类型"></a>浮点数类型</h2><ul>
+<li>与数字中实数的概念一致</li>
+<li>带有小数点及小数的数字</li>
+<li>浮点数取值范围和小数精度都存在限制，但常规计算可忽略</li>
+</ul>
 
     </div>
 
@@ -281,7 +322,10 @@
     <a href="/2022/10/26/hello-world/" rel="prev" title="Hello World">
       <i class="fa fa-chevron-left"></i> Hello World
     </a></div>
-      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2022/10/30/python%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/" rel="next" title="">
+       <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
       </footer>
     
@@ -340,7 +384,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#python%E7%AC%94%E8%AE%B0"><span class="nav-number">1.</span> <span class="nav-text">python笔记</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Python%E4%B8%AD-1-%E3%80%81-1-%E3%80%81-1-%E3%80%81-n-1-%E3%80%81-0-%E3%80%81-%E2%80%A6-0-%E3%80%81-%E2%80%A6-1-%E7%9A%84%E7%90%86%E8%A7%A3"><span class="nav-number">1.1.</span> <span class="nav-text">Python中[-1]、[:-1]、[::-1]、[n::-1]、[:,:,0]、[…,0]、[…,::-1] 的理解</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#eval%E5%87%BD%E6%95%B0"><span class="nav-number">1.2.</span> <span class="nav-text">eval函数</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#python%E7%AC%94%E8%AE%B0"><span class="nav-number">1.</span> <span class="nav-text">python笔记</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Python%E4%B8%AD-1-%E3%80%81-1-%E3%80%81-1-%E3%80%81-n-1-%E3%80%81-0-%E3%80%81-%E2%80%A6-0-%E3%80%81-%E2%80%A6-1-%E7%9A%84%E7%90%86%E8%A7%A3"><span class="nav-number">1.1.</span> <span class="nav-text">Python中[-1]、[:-1]、[::-1]、[n::-1]、[:,:,0]、[…,0]、[…,::-1] 的理解</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#eval%E5%87%BD%E6%95%B0"><span class="nav-number">1.2.</span> <span class="nav-text">eval函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BF%9D%E7%95%99%E5%AD%97"><span class="nav-number">1.3.</span> <span class="nav-text">保留字</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#print%E5%87%BD%E6%95%B0%E6%A0%BC%E5%BC%8F%E5%8C%96"><span class="nav-number">1.4.</span> <span class="nav-text">print函数格式化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B4%E6%95%B0%E7%B1%BB%E5%9E%8B"><span class="nav-number">1.5.</span> <span class="nav-text">整数类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B5%AE%E7%82%B9%E6%95%B0%E7%B1%BB%E5%9E%8B"><span class="nav-number">1.6.</span> <span class="nav-text">浮点数类型</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -356,7 +400,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-count">5</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
